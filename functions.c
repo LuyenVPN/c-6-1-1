@@ -94,6 +94,7 @@ void addCategory() {
 
 // sua danh muc trong danh sach
 void editCategory() {
+	showCategories();
     int idToEdit, found = 0; 
     printf("Nhap ID danh muc muon sua: ");
     scanf("%d", &idToEdit);
@@ -137,6 +138,7 @@ void editCategory() {
 
 // xoa danh muc trong danh sach
 void deleteCategory() {
+	showCategories();
     int idToDelete, found = 0; 
     printf("Nhap ID danh muc muon xoa: ");
     scanf("%d", &idToDelete);
@@ -354,6 +356,7 @@ void printlogin(){
 							// xoa danh muc  
 							system("cls");
 							deleteCategory();
+							fflush(stdin); 
 							backandexit();
 							break;
 						} 
@@ -612,6 +615,7 @@ void editProduct() {
 }
 
 void deleteProduct() {
+	showProduct(); 
     int idToDelete, found = 0;
     printf("Nhap ID san pham muon xoa: ");
     scanf("%d", &idToDelete);
@@ -823,4 +827,3 @@ void loadProductsFromFile() {
     }
     fclose(file);
 }
-
